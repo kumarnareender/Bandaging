@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cZsNQedd7aFrURzM/61C6XkvGk5sp8wjYdaRLZB1h2PEg/fnE/e41taBdmNRivwS4EypoLwKIp8gF/yjwZtqPA==",
+  "dgSpecHash": "c+SY3com/6DrCMhJJB5Y2c4XGWlr4vsRWbGTepUPpeXEKSl3NcuJxjrUc5fFIRladVINgRMNeV5PQC+CW5j3Vg==",
   "success": true,
-  "projectFilePath": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\BandagingWebApplication.csproj",
+  "projectFilePath": "E:\\Bandaging\\BandagingWebApplication\\BandagingWebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

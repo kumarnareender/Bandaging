@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\BandagingWebApplication.csproj": {}
+    "E:\\Bandaging\\BandagingWebApplication\\BandagingWebApplication.csproj": {}
   },
   "projects": {
-    "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\BandagingWebApplication.csproj": {
+    "E:\\Bandaging\\BandagingWebApplication\\BandagingWebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\BandagingWebApplication.csproj",
+        "projectUniqueName": "E:\\Bandaging\\BandagingWebApplication\\BandagingWebApplication.csproj",
         "projectName": "BandagingWebApplication",
-        "projectPath": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\BandagingWebApplication.csproj",
+        "projectPath": "E:\\Bandaging\\BandagingWebApplication\\BandagingWebApplication.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\obj\\",
+        "outputPath": "E:\\Bandaging\\BandagingWebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

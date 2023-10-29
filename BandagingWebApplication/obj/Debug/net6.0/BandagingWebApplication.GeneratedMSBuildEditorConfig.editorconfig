@@ -9,81 +9,81 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BandagingWebApplication
 build_property.RootNamespace = BandagingWebApplication
-build_property.ProjectDir = E:\Fiverr Projects\BandagingWebApplication\BandagingWebApplication\
+build_property.ProjectDir = E:\Bandaging\BandagingWebApplication\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Fiverr Projects\BandagingWebApplication\BandagingWebApplication
+build_property.MSBuildProjectDirectory = E:\Bandaging\BandagingWebApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/AddBlog.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/AddBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/AddCategory.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/AddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/AddSubCategory.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/AddSubCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkU3ViQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/BlogDetails.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/BlogDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/ChangePassword.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/GetAllCategories.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/GetAllCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsQ2F0ZWdvcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/GetAllSubCategories.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/GetAllSubCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2V0QWxsU3ViQ2F0ZWdvcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Admin/Index.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Home/BlogDetails.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Home/BlogDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Home/Index.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Home/Privacy.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Login/Login.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Shared/Error.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/_ViewImports.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/_ViewStart.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Shared/_adminLayout.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Shared/_adminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-2nh88i7tgj
 
-[E:/Fiverr Projects/BandagingWebApplication/BandagingWebApplication/Views/Shared/_Layout.cshtml]
+[E:/Bandaging/BandagingWebApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-golukdrqfk

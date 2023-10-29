@@ -25,63 +25,25 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BandagingWebApplication</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+    <div class="container">
+        <nav class="navbar">
+            <div class="close">
+                <i style="font-size: 32px; color: white" class="humburg  fa-solid fa-bars"></i>
+            </div>
+            <div class="nav_content">
+                <div class="head">
+                    <h3 class="_blogCategories" data-id="0" style="cursor: pointer; color:white;">All Categories</h3>
+                </div>
+                <div class="categories">
+                </div>
             </div>
         </nav>
-
-
-        <div class="container_nav">
-            <nav class="navbar">
-                <div class="close">
-                    <i style="font-size: 32px; color: white" class="fa-solid fa-bars"></i>
-                </div>
-                <div class="nav_content">
-
-
-
-                    @*                     <div class="categories">
-                    <div class="category">
-
-                    </div>
-                    </div> *@
-                    <div class="head">
-                        <h3 class="_blogCategories" data-id="0" style="cursor: pointer;">All Categories</h3>
-                        @*         <i style="margin-right: 10px; font-size: 24px; color: aliceblue"
-                        class="fa-solid fa-xmark"></i> *@
-                    </div>
-                    <div class="categories">
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3" style="padding-left:250px">
-            @*       <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-
-            </div> *@
+        <section class="products" style="">
+     
             @RenderBody()
-        </main>
+        </section>
     </div>
 
-    @*     <footer class="border-top footer text-muted">
-    <div class="container">
-    &copy; 2023 - BandagingWebApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-    </footer>
-    *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -93,6 +55,16 @@
 
 <script>
 
+    $(document).on("click", ".humburg", function () {
+
+        let css = $(".nav_content").css('display');
+        console.log(css);
+        if (css == 'none') {
+            $(".nav_content").css('display', 'block');
+        } else {
+            $(".nav_content").css('display', 'none');
+        }
+    });
 
     $(document).on("click", "._blogCategories", function () {
         window.location = "/home/index/" + $(this).attr('data-id');
