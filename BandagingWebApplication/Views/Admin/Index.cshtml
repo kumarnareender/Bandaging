@@ -59,10 +59,13 @@
     </div>
 </section>
 <script>
-    getAdminBlogs(0);
+
+    let param = getAdminParam('id');
+
+    getAdminBlogs(param);
 
     function getAdminBlogs(id) {
-        id = id == -1 ? window.localStorage.getItem('catId') : 0;
+        // id = id == -1 ? window.localStorage.getItem('catId') : 0;
         $.ajax({
             dataType: "json",
             url: '/Home/GetAllBlogs/' + id,
@@ -102,5 +105,11 @@
 
     }
 
+    function getAdminParam(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
 
 </script>

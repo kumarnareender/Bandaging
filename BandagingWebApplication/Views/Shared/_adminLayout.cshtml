@@ -149,10 +149,10 @@
     $(document).on("click", "._adminBlogCategories", function () {
 
         window.localStorage.setItem('catId', $(this).attr('data-id'));
-
+        window.location = "/admin/index?id=" + $(this).attr('data-id');
 
         // window.location = "/admin/index/" + $(this).attr('data-id');
-        getAdminBlogs(-1);
+        // getAdminBlogs(-1);
     });
 
 

@@ -58,10 +58,11 @@
 </div>
 @* </section> *@
 <script>
-    getBlogs(0);
+    let param = getParam('id');
+    getBlogs(param);
 
     function getBlogs(id) {
-        id = id == -1 ? window.localStorage.getItem('catId') : 0;
+        // id = id == -1 ? window.localStorage.getItem('catId') : 0;
         $.ajax({
             dataType: "json",
             url: '/Home/GetAllBlogs/' + id,
@@ -98,5 +99,10 @@
 
     }
 
-
+    function getParam(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
 </script>
