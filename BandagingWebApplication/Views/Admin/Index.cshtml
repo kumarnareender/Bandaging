@@ -68,7 +68,7 @@
             url: '/Home/GetAllBlogs/' + id,
             data: {},
             success: function (result) {
-                let html = '';
+                let html = '<h1>Blogs</h1>';
                 console.log(result);
                 for (let i = 0; i < result.data.length; i++) {
                     html += '<div class="card product mt-3">'

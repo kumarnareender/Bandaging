@@ -203,16 +203,16 @@ namespace BandagingWebApplication.Controllers
         }
 
         [HttpGet]
-        public Result DeleteBlog(int id)
+        public IActionResult DeleteBlog(int id)
         {
             try
             {
                 _service.DeleteBlog(id);
-                return new Result() { IsSuccess = true };
+                return View("Index");
             }
             catch (Exception ex)
             {
-                return new Result() { IsSuccess = false };
+                return View("Index");
             };
         }
         public IActionResult BlogDetails(int id)
