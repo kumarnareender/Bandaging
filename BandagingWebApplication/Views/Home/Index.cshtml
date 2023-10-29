@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/js/jquery.min.js"></script>
+
+<section class="products" style="">
+    <h1>
+        <span>
+            <i style="margin-right: 10px; font-size: 48px"
+               class="fa-solid fa-xmark"></i>
+        </span>
+        Bandage
+    </h1>
+    <div class="products" id="_blogs">
+        @*  <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </div>
+        </div>
+        <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <a href="#">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </a>
+
+        </div>
+        </div>
+        <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </div>
+        </div> *@
+    </div>
+</section>
+<script>
+    getBlogs(0);
+
+    function getBlogs(id) {
+
+        $.ajax({
+            dataType: "json",
+            url: '/Home/GetAllBlogs/' + id,
+            data: {},
+            success: function (result) {
+                let html = '';
+                for (let i = 0; i < result.data.length; i++) {
+                    html += '<div class="product">'
+                        + '<h2>' + result.data[i].headline + '</h2>'
+                        + '<p>' + result.data[i].description + '</p>'
+                        + '<div class="imgDummy"></div>'
+                        + '<div class="badge" >'
+                        + '<a href="/home/BlogDetails/' + result.data[i].id + '">'
+                        + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
+                        + '</a>'
+                        + '</div></div>';
+                }
+                $("#_blogs").html(html);
+            },
+            error: function (xhr) {
+            }
+        });
+
+    }
+
+
+</script>

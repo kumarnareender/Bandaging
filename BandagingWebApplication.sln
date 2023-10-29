@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandagingWebApplication", "BandagingWebApplication\BandagingWebApplication.csproj", "{FC3168FF-4884-417F-BC6E-E5B256A442BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC3168FF-4884-417F-BC6E-E5B256A442BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3168FF-4884-417F-BC6E-E5B256A442BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3168FF-4884-417F-BC6E-E5B256A442BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3168FF-4884-417F-BC6E-E5B256A442BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAF0842A-1D4F-42BF-8EEB-87692C6E825D}
+	EndGlobalSection
+EndGlobal

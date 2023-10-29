@@ -1,0 +1,116 @@
+﻿@model BandagingWebApplication.Models.Blog
+
+@{
+    ViewData["Title"] = "AddBlog";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<script src="~/js/jquery.min.js"></script>
+
+<h4>Add Blog</h4>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddBlog" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mt-3">
+                <label asp-for="Headline" class="control-label"></label>
+                <input asp-for="Headline" class="form-control" />
+                <span asp-validation-for="Headline" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="PublishedDate" class="control-label"></label>
+                <input asp-for="PublishedDate" class="form-control" type="date" />
+                <span asp-validation-for="PublishedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="ImageOne" class="control-label"></label>
+                <input type="file" asp-for="ImageOne" accept="image/*" class="form-control" />
+                <span asp-validation-for="ImageOne" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="ImageTwo" class="control-label"></label>
+                <input type="file" asp-for="ImageTwo" accept="image/*" class="form-control" />
+                <span asp-validation-for="ImageTwo" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group mt-3">
+                <label class="control-label">Select Category</label>
+                <select id="blogCategories" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+
+            <div class="form-group mt-3">
+                <label asp-for="CategoryId" class="control-label">Select Sub Category</label>
+                <select asp-for="CategoryId" id="subCategories" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+<script>
+
+    $.ajax({
+        dataType: "json",
+        url: '/Home/GetAllCategories',
+        data: {},
+        success: function (recordSet) {
+            let html = "";
+            console.log(recordSet);
+            html += "<option value='0'>Select Category</option>";
+            for (let i = 0; i < recordSet.data.length; i++) {
+                html += "<option value='" + recordSet.data[i].id + "' >" + recordSet.data[i].name + " </option>";
+            }
+
+            $("#blogCategories").html(html);
+        },
+        error: function (xhr) {
+            $('.item-loading').hide();
+        }
+    });
+
+
+    $("#blogCategories").on("change", function () {
+
+        let id = $(this).val();
+
+        $.ajax({
+            dataType: "json",
+            url: '/Home/GetAllSubCategoriesByCategory/' + id,
+            data: {},
+            success: function (recordSet) {
+                let html = "";
+                console.log(recordSet);
+                html += "<option value='0'>Select sub Category</option>";
+                for (let i = 0; i < recordSet.data.length; i++) {
+                    html += "<option value='" + recordSet.data[i].id + "' >" + recordSet.data[i].name + " </option>";
+                }
+
+                $("#subCategories").html(html);
+            },
+            error: function (xhr) {
+                $('.item-loading').hide();
+            }
+        });
+
+    });
+
+</script>

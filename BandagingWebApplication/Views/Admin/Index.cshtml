@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "admin-home";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<script src="~/js/jquery.min.js"></script>
+
+
+<section class="products" style="">
+    @* <h1>
+    <span>
+    <i style="margin-right: 10px; font-size: 48px"
+    class="fa-solid fa-xmark"></i>
+    </span>
+    Bandage
+    </h1> *@
+    <div class="products" id="_adminBlogs">
+        @*  <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </div>
+        </div>
+        <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </div>
+        </div>
+        <div class="product">
+        <h2>Bandage1</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+        nostrum.
+        </p>
+        <!-- img comes here -->
+        <!-- delete imgDummy div and add your own image -->
+        <div class="imgDummy"></div>
+        <div class="badge">
+        <i style="color: red" class="fa-solid fa-angle-right"></i>
+        </div>
+        </div> *@
+    </div>
+</section>
+<script>
+    getAdminBlogs(0);
+
+    function getAdminBlogs(id) {
+
+        $.ajax({
+            dataType: "json",
+            url: '/Home/GetAllBlogs/' + id,
+            data: {},
+            success: function (result) {
+                let html = '';
+                console.log(result);
+                for (let i = 0; i < result.data.length; i++) {
+                    html += '<div class="product">'
+                        + '<h2>' + result.data[i].headline + '</h2>'
+                        + '<p>' + result.data[i].description + '</p>'
+                        // + '<div class="imgDummy"></div>'
+                        + '<div class="row">'
+                        + '<div class="col-md-6"> '
+                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:35%">'
+                        + '</div>'
+                        + '<div class="col-md-6"> '
+                        + ' <img src="/Image/' + result.data[i].imageTwo + '" alt="Jane" style="width:35%">'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="badge" >'
+                        + '<a href="/admin/BlogDetails/' + result.data[i].id + '">'
+                        + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
+                        + '</a>'
+                        + '</div>';
+                    html += '<a  href="/admin/DeleteBlog/' + result.data[i].id + '"> <button style="width:100px;" type="submit" >Delete</button></a></div>';
+                }
+                $("#_adminBlogs").html(html);
+            },
+            error: function (xhr) {
+            }
+        });
+
+    }
+
+
+</script>

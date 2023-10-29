@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BandagingWebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/BandagingWebApplication.styles.css" asp-append-version="true" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    @* <link rel="stylesheet" href="style.css" /> *@
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BandagingWebApplication</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+
+
+        <div class="container_nav">
+            <nav class="navbar">
+                <div class="close">
+                    <i style="font-size: 32px; color: white" class="fa-solid fa-bars"></i>
+                </div>
+                <div class="nav_content">
+
+
+
+                    @*                     <div class="categories">
+                    <div class="category">
+
+                    </div>
+                    </div> *@
+                    <div class="head">
+                        <h3>All Categories</h3>
+                        @*         <i style="margin-right: 10px; font-size: 24px; color: aliceblue"
+                        class="fa-solid fa-xmark"></i> *@
+                    </div>
+                    <div class="categories">
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3" style="padding-left:250px">
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+
+    @*     <footer class="border-top footer text-muted">
+    <div class="container">
+    &copy; 2023 - BandagingWebApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+    </footer>
+    *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<script src="~/js/jquery.min.js"></script>
+</html>
+
+<script>
+
+
+    $(document).on("click", "._blogCategories", function () {
+        getBlogs($(this).attr('data-id'));
+    });
+
+    $.ajax({
+        dataType: "json",
+        url: '/Home/GetAllCategoriesWithSubCategories',
+        data: {},
+        success: function (result) {
+            let html = '';
+            console.log(result);
+            for (let i = 0; i < result.data.length; i++) {
+                html += '<div class="category">'
+                    + '<div class="main" >'
+                    + '<h4><i class="fa-regular fa-money-bill-1" ></i> ' + result.data[i].name + ' </h4>'
+                    + '<i class="fa-solid fa-angle-right" > </i>'
+                    + '</div>'
+                    + '<ul class="list">';
+
+                for (let k = 0; k < result.data[i].subCategories.length; k++) {
+                    html += '<li class="_blogCategories" data-id="' + result.data[i].subCategories[k].id + '">' + result.data[i].subCategories[k].name + ' </li></a>'
+
+                }
+                html += '</ul></div>';
+            }
+            console.log("HTML: ", html);
+            $(".categories").html(html);
+        },
+        error: function (xhr) {
+            $('.item-loading').hide();
+        }
+    });
+
+</script>
