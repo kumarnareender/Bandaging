@@ -75,26 +75,26 @@
                     <li><a href="/Home/GetBlogByCat?Id=2"> Sub2</a></li>
                     </ul>
                     </li> *@
-@* 
+                    @*
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Home</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AddBlog">Add Blog</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AddBlog">Add Blog</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetAllCategories">Categories</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetAllCategories">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetAllSubCategories">Sub Category</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="GetAllSubCategories">Sub Category</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="ChangePassword">Change Password</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="ChangePassword">Change Password</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
                     </li> *@
                     @* </ul>
                     </div> *@
@@ -147,8 +147,12 @@
 <script>
 
     $(document).on("click", "._adminBlogCategories", function () {
-        window.location = "/admin/index/" + $(this).attr('data-id');
-        // getAdminBlogs($(this).attr('data-id'));
+
+        window.localStorage.setItem('catId', $(this).attr('data-id'));
+
+
+        // window.location = "/admin/index/" + $(this).attr('data-id');
+        getAdminBlogs(-1);
     });
 
 

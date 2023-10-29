@@ -39,7 +39,7 @@
             </div>
         </nav>
         <section class="products" style="">
-     
+
             @RenderBody()
         </section>
     </div>
@@ -67,8 +67,9 @@
     });
 
     $(document).on("click", "._blogCategories", function () {
-        window.location = "/home/index/" + $(this).attr('data-id');
-        getBlogs($(this).attr('data-id'));
+        // window.location = "/home/index/" + $(this).attr('data-id');
+        window.localStorage.setItem('catId', $(this).attr('data-id'));
+        getBlogs(-1);
     });
 
     $.ajax({

@@ -61,13 +61,17 @@
     getBlogs(0);
 
     function getBlogs(id) {
-
+        id = id == -1 ? window.localStorage.getItem('catId') : 0;
         $.ajax({
             dataType: "json",
             url: '/Home/GetAllBlogs/' + id,
             data: {},
             success: function (result) {
                 let html = '<h1>Blogs</h1>';
+                if (result.data.length == 0) {
+                    html += '<div class="card product mt-3">'
+                        + '<h2>Data Not Found</h2></div>';
+                }
                 for (let i = 0; i < result.data.length; i++) {
                     html += '<div class="card product mt-3">'
                         + '<h2>' + result.data[i].headline + '</h2>'

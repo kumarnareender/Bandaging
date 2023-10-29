@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
-
+using System.Web.Mvc.Routing;
 
 namespace BandagingWebApplication.Controllers
 {
@@ -207,6 +207,17 @@ namespace BandagingWebApplication.Controllers
         {
             try
             {
+                var blog = _service.GetBlog(id);
+
+
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+
+                string pathOne = Path.Combine(wwwRootPath + "/Image/", blog.ImageOne);
+                string pathTwo = Path.Combine(wwwRootPath + "/Image/", blog.ImageTwo);
+
+                System.IO.File.Delete(pathOne);
+                System.IO.File.Delete(pathTwo);
+
                 _service.DeleteBlog(id);
                 return View("Index");
             }
