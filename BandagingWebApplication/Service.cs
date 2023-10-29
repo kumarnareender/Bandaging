@@ -172,6 +172,12 @@ namespace BandagingWebApplication
                 }
                 else
                     data = context.Blogs.Where(x => x.CategoryId == categoryId).OrderByDescending(x => x.PublishedDate).ToList();
+
+                foreach (var item in data)
+                {
+                    item.Description = item.Description.Substring(0, Math.Min(item.Description.Length, 100));
+                }
+
                 return data;
             }
             catch (Exception ex)

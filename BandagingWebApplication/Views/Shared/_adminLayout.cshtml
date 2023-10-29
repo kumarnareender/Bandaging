@@ -103,7 +103,7 @@
                     @* </div> *@
 
                     <div class="head">
-                        <h3>All Categories</h3>
+                        <h3 class="_adminBlogCategories" data-id="0" style="cursor: pointer;">All Categories</h3>
                         @*         <i style="margin-right: 10px; font-size: 24px; color: aliceblue"
                         class="fa-solid fa-xmark"></i> *@
                     </div>
@@ -147,7 +147,8 @@
 <script>
 
     $(document).on("click", "._adminBlogCategories", function () {
-        getAdminBlogs($(this).attr('data-id'));
+        window.location = "/admin/index/" + $(this).attr('data-id');
+        // getAdminBlogs($(this).attr('data-id'));
     });
 
 
@@ -160,13 +161,13 @@
             for (let i = 0; i < result.data.length; i++) {
                 html += '<div class="category">'
                     + '<div class="main" >'
-                    + '<h4><i class="fa-regular fa-money-bill-1" ></i> ' + result.data[i].name + ' </h4>'
+                    + '<h4><i class="tem-fa-regular tem-fa-money-bill-1" ></i> ' + result.data[i].name + ' </h4>'
                     + '<i class="fa-solid fa-angle-right" > </i>'
                     + '</div>'
                     + '<ul class="list">';
 
                 for (let k = 0; k < result.data[i].subCategories.length; k++) {
-                    html += '<li class="_adminBlogCategories" data-id="' + result.data[i].subCategories[k].id + '">' + result.data[i].subCategories[k].name + ' </li></a>'
+                    html += '<li style="cursor: pointer;" class="_adminBlogCategories" data-id="' + result.data[i].subCategories[k].id + '">' + result.data[i].subCategories[k].name + ' </li></a>'
 
                 }
                 html += '</ul></div>';

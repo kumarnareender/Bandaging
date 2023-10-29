@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @* <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" /> *@
-    <link rel="stylesheet" href="~/BandagingWebApplication.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/BandagingWebApplication.styles.css" asp-append-version="true" /> *@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,7 +53,7 @@
                     </div>
                     </div> *@
                     <div class="head">
-                        <h3>All Categories</h3>
+                        <h3 class="_blogCategories" data-id="0" style="cursor: pointer;">All Categories</h3>
                         @*         <i style="margin-right: 10px; font-size: 24px; color: aliceblue"
                         class="fa-solid fa-xmark"></i> *@
                     </div>
@@ -66,12 +66,12 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3" style="padding-left:250px">
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            @*       <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 
-                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
 
-            </div>
+            </div> *@
             @RenderBody()
         </main>
     </div>
@@ -95,6 +95,7 @@
 
 
     $(document).on("click", "._blogCategories", function () {
+        window.location = "/home/index/" + $(this).attr('data-id');
         getBlogs($(this).attr('data-id'));
     });
 
@@ -108,13 +109,13 @@
             for (let i = 0; i < result.data.length; i++) {
                 html += '<div class="category">'
                     + '<div class="main" >'
-                    + '<h4><i class="fa-regular fa-money-bill-1" ></i> ' + result.data[i].name + ' </h4>'
+                    + '<h4><i class="tem-fa-regular tem-fa-money-bill-1" ></i> ' + result.data[i].name + ' </h4>'
                     + '<i class="fa-solid fa-angle-right" > </i>'
                     + '</div>'
                     + '<ul class="list">';
 
                 for (let k = 0; k < result.data[i].subCategories.length; k++) {
-                    html += '<li class="_blogCategories" data-id="' + result.data[i].subCategories[k].id + '">' + result.data[i].subCategories[k].name + ' </li></a>'
+                    html += '<li style="cursor: pointer;" class="_blogCategories" data-id="' + result.data[i].subCategories[k].id + '">' + result.data[i].subCategories[k].name + ' </li></a>'
 
                 }
                 html += '</ul></div>';

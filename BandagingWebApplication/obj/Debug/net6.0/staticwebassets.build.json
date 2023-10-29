@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y3Q+OtkBdvkwZchYO7Ia6D3nGEyzgKJLi7fUHIdJeQM=",
+  "Hash": "/9K7XawQThowmcAQpZAeNFc6lCPB0Fz63Ay2q/8LT9M=",
   "Source": "BandagingWebApplication",
   "BasePath": "_content/BandagingWebApplication",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (2)230038018.png",
+      "SourceId": "BandagingWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\",
+      "BasePath": "_content/BandagingWebApplication",
+      "RelativePath": "Image/Screenshot (2)230038018.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Screenshot (2)230038018.png"
+    },
+    {
+      "Identity": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (3)230028176.png",
+      "SourceId": "BandagingWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\",
+      "BasePath": "_content/BandagingWebApplication",
+      "RelativePath": "Image/Screenshot (3)230028176.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Screenshot (3)230028176.png"
     },
     {
       "Identity": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\js\\jquery.min.js",

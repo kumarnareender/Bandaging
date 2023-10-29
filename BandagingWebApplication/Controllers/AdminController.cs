@@ -98,14 +98,14 @@ namespace BandagingWebApplication.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddBlog([Bind("Description,CategoryId,Headline,PublishedDate,ImageOne,ImageTwo")] BlogViewModel model)
+        public ActionResult AddBlog([Bind("Description,CategoryId,Headline,ImageOne,ImageTwo")] BlogViewModel model)
         {
             Blog blog = new()
             {
                 Description = model.Description,
                 CategoryId = model.CategoryId,
                 Headline = model.Headline,
-                PublishedDate = model.PublishedDate
+                PublishedDate = DateTime.Now
             };
 
             string wwwRootPath = _hostEnvironment.WebRootPath;
@@ -115,6 +115,13 @@ namespace BandagingWebApplication.Controllers
             string extension = Path.GetExtension(model.ImageOne.FileName);
             string name = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+
+            if (!Directory.Exists(wwwRootPath + "/Image/"))
+            {
+                Directory.CreateDirectory(wwwRootPath + "/Image/");
+            }
+
+
             using (var fileStream = new FileStream(path, FileMode.Create))
             {
                 model.ImageOne.CopyToAsync(fileStream);

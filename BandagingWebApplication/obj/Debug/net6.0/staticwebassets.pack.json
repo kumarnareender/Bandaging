@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\BandagingWebApplication.bundle.scp.css"
     },
     {
+      "Id": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (2)230038018.png",
+      "PackagePath": "staticwebassets\\Image\\Screenshot (2)230038018.png"
+    },
+    {
+      "Id": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (3)230028176.png",
+      "PackagePath": "staticwebassets\\Image\\Screenshot (3)230028176.png"
+    },
+    {
       "Id": "E:\\Fiverr Projects\\BandagingWebApplication\\BandagingWebApplication\\wwwroot\\css\\StyleSheet.scss",
       "PackagePath": "staticwebassets\\css\\StyleSheet.scss"
     },

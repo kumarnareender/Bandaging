@@ -6,8 +6,6 @@ namespace BandagingWebApplication.ViewModel
     {
         public string? Headline { get; set; }
 
-        public DateTime? PublishedDate { get; set; }
-
         public string? Description { get; set; }
 
         public IFormFile ImageOne { get; set; }
