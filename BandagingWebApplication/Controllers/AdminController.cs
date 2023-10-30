@@ -59,14 +59,16 @@ namespace BandagingWebApplication.Controllers
             {
                 var _user = _service.GetUser();
 
-                //if (_user.Password == user.OldPassword && user.Password == user.RetypePassword)
-                //{
+                if (_user.Password == user.OldPassword && user.Password == user.RetypePassword && user.Password != null)
+                {
+                    _service.ChangePassword(user);
+                    await HttpContext.SignOutAsync();
+                    return RedirectToAction("Index", "Admin");
+                }
 
-                //}
-
-                _service.ChangePassword(user);
-                await HttpContext.SignOutAsync();
-                return RedirectToAction("Index", "Home");
+                //_service.ChangePassword(user);
+                //await HttpContext.SignOutAsync();
+                return View();
                 //return RedirectToAction("Index", "Admin");
                 //return new Result() { IsSuccess = true };
             }
