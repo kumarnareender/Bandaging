@@ -138,10 +138,9 @@ namespace BandagingWebApplication.Controllers
 
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
-                    model.ImageOne.CopyToAsync(fileStream);
+                    model.ImageOne.CopyToAsync(fileStream).Wait();
                 }
                 blog.ImageOne = name;
-
 
             }
             //Image Two
@@ -153,7 +152,7 @@ namespace BandagingWebApplication.Controllers
                 string pathTwo = Path.Combine(wwwRootPath + "/Image/", fileNameTwo);
                 using (var fileStream = new FileStream(pathTwo, FileMode.Create))
                 {
-                    model.ImageTwo.CopyToAsync(fileStream);
+                    model.ImageTwo.CopyToAsync(fileStream).Wait();
                 }
 
                 blog.ImageTwo = imageNameTwo;

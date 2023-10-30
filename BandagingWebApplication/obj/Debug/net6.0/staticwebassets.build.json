@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OSp6pqWWGAY/d/cIpP8rZ6y4tsg7fZ71xEI52RtqHB8=",
+  "Hash": "FQm0yLsZZHQ9yKexgSwiPE2g4VLBf7g8niFpZTd8uPw=",
   "Source": "BandagingWebApplication",
   "BasePath": "_content/BandagingWebApplication",
   "Mode": "Default",
@@ -134,6 +134,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\aboutus.jpg"
+    },
+    {
+      "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\e1230741859__.jpg",
+      "SourceId": "BandagingWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\",
+      "BasePath": "_content/BandagingWebApplication",
+      "RelativePath": "Image/e1230741859__.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\e1230741859__.jpg"
+    },
+    {
+      "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\e1231348802.jpg",
+      "SourceId": "BandagingWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\",
+      "BasePath": "_content/BandagingWebApplication",
+      "RelativePath": "Image/e1231348802.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\e1231348802.jpg"
     },
     {
       "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (2)230038018.png",

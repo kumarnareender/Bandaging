@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\Image\\aboutus.jpg"
     },
     {
+      "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\e1230741859__.jpg",
+      "PackagePath": "staticwebassets\\Image\\e1230741859__.jpg"
+    },
+    {
+      "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\e1231348802.jpg",
+      "PackagePath": "staticwebassets\\Image\\e1231348802.jpg"
+    },
+    {
       "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\css\\StyleSheet.scss",
       "PackagePath": "staticwebassets\\css\\StyleSheet.scss"
     },
