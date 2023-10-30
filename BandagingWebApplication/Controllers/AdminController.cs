@@ -46,14 +46,24 @@ namespace BandagingWebApplication.Controllers
 
         public IActionResult ChangePassword()
         {
-            return View();
+            var user = _service.GetUser();
+            UserViewModel _user = new();
+            _user.OldPassword = user.Password;
+            return View(_user);
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangePassword(User user)
+        public async Task<IActionResult> ChangePassword(UserViewModel user)
         {
             try
             {
+                var _user = _service.GetUser();
+
+                //if (_user.Password == user.OldPassword && user.Password == user.RetypePassword)
+                //{
+
+                //}
+
                 _service.ChangePassword(user);
                 await HttpContext.SignOutAsync();
                 return RedirectToAction("Index", "Home");

@@ -22,7 +22,7 @@ namespace BandagingWebApplication
             }
         }
 
-        public bool ChangePassword(User user)
+        public bool ChangePassword(UserViewModel user)
         {
             try
             {
@@ -139,6 +139,18 @@ namespace BandagingWebApplication
             try
             {
                 var data = context.Blogs.OrderByDescending(x => x.PublishedDate).ToList();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public User GetUser()
+        {
+            try
+            {
+                var data = context.Users.FirstOrDefault();
                 return data;
             }
             catch (Exception ex)
