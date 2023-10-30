@@ -16,7 +16,7 @@
         <form asp-action="AddBlog" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group mt-3">
-                <label asp-for="Headline" class="control-label"></label>
+                <label asp-for="Headline" class="control-label"></label><span aria-hidden="true" class="required" style="color:red">*</span>
                 <input asp-for="Headline" class="form-control" />
                 <span asp-validation-for="Headline" class="text-danger"></span>
             </div>
@@ -26,12 +26,12 @@
                 <span asp-validation-for="PublishedDate" class="text-danger"></span>
             </div> *@
             <div class="form-group mt-3">
-                <label asp-for="Description" class="control-label"></label>
+                <label asp-for="Description" class="control-label"></label><span aria-hidden="true" class="required" style="color:red">*</span>
                 <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group mt-3">
-                <label asp-for="ImageOne" class="control-label"></label>
+                <label asp-for="ImageOne" class="control-label"></label><span aria-hidden="true" class="required" style="color:red">*</span>
                 <input type="file" asp-for="ImageOne" accept="image/*" class="form-control" />
                 <span asp-validation-for="ImageOne" class="text-danger"></span>
             </div>
@@ -44,12 +44,12 @@
 
 
             <div class="form-group mt-3">
-                <label class="control-label">Select Category</label>
+                <label class="control-label">Select Category</label><span aria-hidden="true" class="required" style="color:red">*</span>
                 <select id="blogCategories" class="form-control" asp-items="ViewBag.CategoryId"></select>
             </div>
 
             <div class="form-group mt-3">
-                <label asp-for="CategoryId" class="control-label">Select Sub Category</label>
+                <label asp-for="CategoryId" class="control-label">Select Sub Category</label><span aria-hidden="true" class="required" style="color:red">*</span>
                 <select asp-for="CategoryId" id="subCategories" class="form-control" asp-items="ViewBag.CategoryId"></select>
             </div>
             <div class="form-group mt-3">

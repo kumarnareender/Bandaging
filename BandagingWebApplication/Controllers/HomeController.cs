@@ -20,6 +20,11 @@ namespace BandagingWebApplication.Controllers
             return View();
         }
 
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
         public IActionResult BlogDetails(int id)
         {
             var data = service.GetBlog(id);

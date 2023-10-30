@@ -75,21 +75,22 @@
                 }
                 for (let i = 0; i < result.data.length; i++) {
                     html += '<div class="card product mt-3">'
+                        + '<div class="row">'
+                        + '<div class="col-md-8"> '
                         + '<h2>' + result.data[i].headline + '</h2>'
                         + '<p>' + result.data[i].description + '</p>'
-                        + '<div class="row">'
-                        + '<div class="col-md-6"> '
-                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:35%">'
                         + '</div>'
-                        + '<div class="col-md-6"> '
-                        + ' <img src="/Image/' + result.data[i].imageTwo + '" alt="Jane" style="width:35%">'
-                        + '</div>'
-                        + '</div>'
+                        + '<div class="col-md-4"> '
                         + '<div class="badge" >'
                         + '<a href="/home/BlogDetails/' + result.data[i].id + '">'
                         + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
                         + '</a>'
-                        + '</div></div>';
+                        + '</div>'
+                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">'
+                        + '</div>'
+
+                        + '</div></div>'
+                       +'</div>';
                 }
                 $("#_blogs").html(html);
             },

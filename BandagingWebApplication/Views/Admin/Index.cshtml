@@ -77,24 +77,41 @@
                         + '<h2>Data Not Found</h2></div>';
                 }
                 for (let i = 0; i < result.data.length; i++) {
+                    // html += '<div class="card product mt-3">'
+                    //     + '<h2>' + result.data[i].headline + '</h2>'
+                    //     + '<p>' + result.data[i].description + '</p>'
+                    //     // + '<div class="imgDummy"></div>'
+                    //     + '<div class="row">'
+                    //     + '<div class="col-md-6"> '
+                    //     + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:35%">'
+                    //     + '</div>'
+                    //     + '<div class="col-md-6"> '
+                    //     + ' <img src="/Image/' + result.data[i].imageTwo + '" alt="Jane" style="width:35%">'
+                    //     + '</div>'
+                    //     + '</div>'
+
+                    //     + '<div class="badge" >'
+                    //     + '<a href="/admin/BlogDetails/' + result.data[i].id + '">'
+                    //     + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
+                    //     + '</a>'
+                    //     + '</div>';
                     html += '<div class="card product mt-3">'
+                        + '<div class="row">'
+                        + '<div class="col-md-8"> '
                         + '<h2>' + result.data[i].headline + '</h2>'
                         + '<p>' + result.data[i].description + '</p>'
-                        // + '<div class="imgDummy"></div>'
-                        + '<div class="row">'
-                        + '<div class="col-md-6"> '
-                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:35%">'
                         + '</div>'
-                        + '<div class="col-md-6"> '
-                        + ' <img src="/Image/' + result.data[i].imageTwo + '" alt="Jane" style="width:35%">'
-                        + '</div>'
-                        + '</div>'
-
+                        + '<div class="col-md-4"> '
                         + '<div class="badge" >'
-                        + '<a href="/admin/BlogDetails/' + result.data[i].id + '">'
+                        + '<a href="/home/BlogDetails/' + result.data[i].id + '">'
                         + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
                         + '</a>'
+                        + '</div>'
+                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">'
+                        + '</div>'
+
                         + '</div>';
+
                     html += '<a  href="/admin/DeleteBlog/' + result.data[i].id + '"> <button style="width:100px;" type="submit" >Delete</button></a></div>';
                 }
                 $("#_adminBlogs").html(html);

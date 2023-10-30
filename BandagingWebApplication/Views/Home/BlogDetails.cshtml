@@ -31,21 +31,9 @@
     <div class="col-md-12">
         <h4>@Html.DisplayFor(model => model.Headline)</h4>
         <hr />
+        <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:100%;margin-bottom:30px">
 
-        <div class="row">
-            <div class="col-md-6">
-                <p>@Html.DisplayFor(model => model.Headline)</p>
-                <p> @Html.DisplayFor(model => model.PublishedDate)</p>
-
-            </div>
-            <div class="col-md-6">
-                <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:35%">
-
-            </div>
-        </div>
-
-
-
+        <p> @Html.DisplayFor(model => model.PublishedDate)</p>
         <p>@Html.DisplayFor(model => model.Description)</p>
         @*  <dl class="row">
 
@@ -66,17 +54,18 @@
     <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:35%">
     <img src="/Image/@Html.DisplayFor(model => model.ImageTwo)" alt="Jane" style="width:35%">
     </div> *@
-    <div class="col-md-12" style="margin-top:50px">
+    <div class="col-md-12" style="margin-top:25px">
         <div class="row">
-       @*      <div class="col-md-12">
-                <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:35%">
+            @*      <div class="col-md-12">
+            <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:35%">
 
             </div> *@
             <div class="col-md-12 mt-5">
-                <img src="/Image/@Html.DisplayFor(model => model.ImageTwo)" alt="Jane" style="width:35%">
+                <img src="/Image/@Html.DisplayFor(model => model.ImageTwo)" alt="Jane" style="width:100%">
             </div>
         </div>
 
 
     </div>
+
 </div>

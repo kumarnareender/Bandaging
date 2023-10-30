@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "791deMOe/OcwzT+yISZGEtO/0D1z0rdkE9XU+BUXxGs=",
+  "Hash": "u3ckbpiZNDw8CqbthWHD+o2ecE/h5abL8Ia2y3DgZQw=",
   "Source": "BandagingWebApplication",
   "BasePath": "_content/BandagingWebApplication",
   "Mode": "Default",
@@ -102,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\0f155dd9-3ebb-4a7e-a4b4-e431411ab5de234205388.jpg",
+      "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\aboutus.jpg",
       "SourceId": "BandagingWebApplication",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\",
       "BasePath": "_content/BandagingWebApplication",
-      "RelativePath": "Image/0f155dd9-3ebb-4a7e-a4b4-e431411ab5de234205388.jpg",
+      "RelativePath": "Image/aboutus.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,7 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Image\\0f155dd9-3ebb-4a7e-a4b4-e431411ab5de234205388.jpg"
+      "OriginalItemSpec": "wwwroot\\Image\\aboutus.jpg"
     },
     {
       "Identity": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (2)230038018.png",

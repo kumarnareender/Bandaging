@@ -5,16 +5,16 @@
       "PackagePath": "staticwebassets\\BandagingWebApplication.bundle.scp.css"
     },
     {
-      "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\0f155dd9-3ebb-4a7e-a4b4-e431411ab5de234205388.jpg",
-      "PackagePath": "staticwebassets\\Image\\0f155dd9-3ebb-4a7e-a4b4-e431411ab5de234205388.jpg"
-    },
-    {
       "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (2)230038018.png",
       "PackagePath": "staticwebassets\\Image\\Screenshot (2)230038018.png"
     },
     {
       "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\Screenshot (3)230028176.png",
       "PackagePath": "staticwebassets\\Image\\Screenshot (3)230028176.png"
+    },
+    {
+      "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\Image\\aboutus.jpg",
+      "PackagePath": "staticwebassets\\Image\\aboutus.jpg"
     },
     {
       "Id": "E:\\Bandaging\\BandagingWebApplication\\wwwroot\\css\\StyleSheet.scss",

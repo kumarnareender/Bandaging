@@ -213,6 +213,10 @@ namespace BandagingWebApplication.Controllers
                 return View();
             };
         }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
 
         [HttpGet]
         public IActionResult DeleteBlog(int id)
