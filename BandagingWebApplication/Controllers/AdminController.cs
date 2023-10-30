@@ -123,35 +123,42 @@ namespace BandagingWebApplication.Controllers
             string wwwRootPath = _hostEnvironment.WebRootPath;
 
             //Image One
-            string fileName = Path.GetFileNameWithoutExtension(model.ImageOne.FileName);
-            string extension = Path.GetExtension(model.ImageOne.FileName);
-            string name = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-            string path = Path.Combine(wwwRootPath + "/Image/", fileName);
-
-            if (!Directory.Exists(wwwRootPath + "/Image/"))
+            if (model.ImageOne != null)
             {
-                Directory.CreateDirectory(wwwRootPath + "/Image/");
+                string fileName = Path.GetFileNameWithoutExtension(model.ImageOne.FileName);
+                string extension = Path.GetExtension(model.ImageOne.FileName);
+                string name = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+
+                if (!Directory.Exists(wwwRootPath + "/Image/"))
+                {
+                    Directory.CreateDirectory(wwwRootPath + "/Image/");
+                }
+
+
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    model.ImageOne.CopyToAsync(fileStream);
+                }
+                blog.ImageOne = name;
+
+
             }
-
-
-            using (var fileStream = new FileStream(path, FileMode.Create))
-            {
-                model.ImageOne.CopyToAsync(fileStream);
-            }
-            blog.ImageOne = name;
-
-
             //Image Two
-            string fileNameTwo = Path.GetFileNameWithoutExtension(model.ImageTwo.FileName);
-            string extensionTwo = Path.GetExtension(model.ImageTwo.FileName);
-            string imageNameTwo = fileNameTwo = fileNameTwo + DateTime.Now.ToString("yymmssfff") + extensionTwo;
-            string pathTwo = Path.Combine(wwwRootPath + "/Image/", fileNameTwo);
-            using (var fileStream = new FileStream(pathTwo, FileMode.Create))
+            if (model.ImageTwo != null)
             {
-                model.ImageTwo.CopyToAsync(fileStream);
-            }
+                string fileNameTwo = Path.GetFileNameWithoutExtension(model.ImageTwo.FileName);
+                string extensionTwo = Path.GetExtension(model.ImageTwo.FileName);
+                string imageNameTwo = fileNameTwo = fileNameTwo + DateTime.Now.ToString("yymmssfff") + extensionTwo;
+                string pathTwo = Path.Combine(wwwRootPath + "/Image/", fileNameTwo);
+                using (var fileStream = new FileStream(pathTwo, FileMode.Create))
+                {
+                    model.ImageTwo.CopyToAsync(fileStream);
+                }
 
-            blog.ImageTwo = imageNameTwo;
+                blog.ImageTwo = imageNameTwo;
+
+            }
             _service.AddBlog(blog);
             return RedirectToAction("Index", "Admin");
         }
