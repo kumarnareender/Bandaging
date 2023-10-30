@@ -236,11 +236,19 @@ namespace BandagingWebApplication.Controllers
                 {
                     string wwwRootPath = _hostEnvironment.WebRootPath;
 
-                    string pathOne = Path.Combine(wwwRootPath + "/Image/", blog.ImageOne);
-                    string pathTwo = Path.Combine(wwwRootPath + "/Image/", blog.ImageTwo);
+                    if (blog.ImageOne != null)
+                    {
 
-                    System.IO.File.Delete(pathOne);
-                    System.IO.File.Delete(pathTwo);
+                        string pathOne = Path.Combine(wwwRootPath + "/Image/", blog.ImageOne);
+                        System.IO.File.Delete(pathOne);
+
+                    }
+
+                    if (blog.ImageTwo != null)
+                    {
+                        string pathTwo = Path.Combine(wwwRootPath + "/Image/", blog.ImageTwo);
+                        System.IO.File.Delete(pathTwo);
+                    }
                 }
 
                 _service.DeleteBlog(id);

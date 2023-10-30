@@ -31,7 +31,13 @@
     <div class="col-md-12">
         <h4>@Html.DisplayFor(model => model.Headline)</h4>
         <hr />
-        <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:100%;margin-bottom:30px">
+
+        @if (Model.ImageOne != null)
+        {
+            <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:100%;margin-bottom:30px">
+
+        }
+
 
         <p> @Html.DisplayFor(model => model.PublishedDate)</p>
         <p>@Html.DisplayFor(model => model.Description)</p>
@@ -60,9 +66,15 @@
             <img src="/Image/@Html.DisplayFor(model => model.ImageOne)" alt="Jane" style="width:35%">
 
             </div> *@
-            <div class="col-md-12 mt-5">
-                <img src="/Image/@Html.DisplayFor(model => model.ImageTwo)" alt="Jane" style="width:100%">
-            </div>
+
+            @if (Model.ImageTwo != null)
+            {
+                <div class="col-md-12 mt-5">
+                    <img src="/Image/@Html.DisplayFor(model => model.ImageTwo)" alt="Jane" style="width:100%">
+                </div>
+            }
+
+
         </div>
 
 

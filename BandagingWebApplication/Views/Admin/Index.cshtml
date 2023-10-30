@@ -103,12 +103,15 @@
                         + '</div>'
                         + '<div class="col-md-4"> '
                         + '<div class="badge" >'
-                        + '<a href="/home/BlogDetails/' + result.data[i].id + '">'
+                        + '<a href="/admin/BlogDetails/' + result.data[i].id + '">'
                         + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
                         + '</a>'
                         + '</div>'
-                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">'
-                        + '</div>'
+                    if (result.data[i].imageOne != null) {
+                        html += ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">';
+                    }
+                    // + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">'
+                    html += '</div>'
 
                         + '</div>';
 

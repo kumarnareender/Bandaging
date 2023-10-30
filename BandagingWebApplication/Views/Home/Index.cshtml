@@ -86,11 +86,12 @@
                         + '<i style="color: red" class="fa-solid fa-angle-right"> </i>'
                         + '</a>'
                         + '</div>'
-                        + ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">'
-                        + '</div>'
-
+                    if (result.data[i].imageOne != null) {
+                        html += ' <img src="/Image/' + result.data[i].imageOne + '" alt="Jane" style="width:100%">';
+                    }
+                    html += '</div>'
                         + '</div></div>'
-                       +'</div>';
+                        + '</div>';
                 }
                 $("#_blogs").html(html);
             },
